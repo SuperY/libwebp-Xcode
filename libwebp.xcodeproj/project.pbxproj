@@ -168,6 +168,8 @@
 		80C1D53B2135871B007974F5 /* upsampling_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 80C1D5382135871B007974F5 /* upsampling_sse41.c */; };
 		80C1D53C2135871B007974F5 /* yuv_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 80C1D5392135871B007974F5 /* yuv_sse41.c */; };
 		80C1D53D2135871B007974F5 /* common_sse41.h in Headers */ = {isa = PBXBuildFile; fileRef = 80C1D53A2135871B007974F5 /* common_sse41.h */; };
+		8F4F26BD253D80FA00C95C3D /* WebPImageSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F4F26BB253D80FA00C95C3D /* WebPImageSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F4F26BE253D80FA00C95C3D /* WebPImageSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4F26BC253D80FA00C95C3D /* WebPImageSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -345,6 +347,8 @@
 		80C1D5382135871B007974F5 /* upsampling_sse41.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = upsampling_sse41.c; sourceTree = "<group>"; };
 		80C1D5392135871B007974F5 /* yuv_sse41.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yuv_sse41.c; sourceTree = "<group>"; };
 		80C1D53A2135871B007974F5 /* common_sse41.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_sse41.h; sourceTree = "<group>"; };
+		8F4F26BB253D80FA00C95C3D /* WebPImageSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPImageSerialization.h; sourceTree = "<group>"; };
+		8F4F26BC253D80FA00C95C3D /* WebPImageSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebPImageSerialization.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +373,7 @@
 		804BDDFA213568F500BA3395 = {
 			isa = PBXGroup;
 			children = (
+				8F4F26BA253D80FA00C95C3D /* WebPImageSerialization */,
 				80C1D53721357BA7007974F5 /* README.md */,
 				804BDE1021356AEB00BA3395 /* libwebp */,
 				804BDE06213568F500BA3395 /* Xcode */,
@@ -640,6 +645,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8F4F26BA253D80FA00C95C3D /* WebPImageSerialization */ = {
+			isa = PBXGroup;
+			children = (
+				8F4F26BB253D80FA00C95C3D /* WebPImageSerialization.h */,
+				8F4F26BC253D80FA00C95C3D /* WebPImageSerialization.m */,
+			);
+			path = WebPImageSerialization;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -654,6 +668,7 @@
 				804BE07F21356C0A00BA3395 /* common_sse2.h in Headers */,
 				804BDF9521356BC100BA3395 /* endian_inl_utils.h in Headers */,
 				804BDFAE21356BCC00BA3395 /* mux.h in Headers */,
+				8F4F26BD253D80FA00C95C3D /* WebPImageSerialization.h in Headers */,
 				804BDFAB21356BCC00BA3395 /* types.h in Headers */,
 				804BDFA221356BC100BA3395 /* utils.h in Headers */,
 				804BDFB821356BDB00BA3395 /* animi.h in Headers */,
@@ -838,6 +853,7 @@
 				804BE06221356C0A00BA3395 /* lossless_neon.c in Sources */,
 				804BE07821356C0A00BA3395 /* rescaler_mips32.c in Sources */,
 				804BE04421356C0A00BA3395 /* upsampling_mips_dsp_r2.c in Sources */,
+				8F4F26BE253D80FA00C95C3D /* WebPImageSerialization.m in Sources */,
 				804BDF9221356BC100BA3395 /* huffman_utils.c in Sources */,
 				804BE09A21356C2600BA3395 /* alpha_dec.c in Sources */,
 				804BE04821356C0A00BA3395 /* dec_neon.c in Sources */,
@@ -1079,6 +1095,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Xcode/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1101,6 +1118,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Xcode/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (

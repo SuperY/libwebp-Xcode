@@ -12,6 +12,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSLog(@"Decoder version: %d", WebPGetDecoderVersion());
+        NSLog(@"Create PR from Xcode: %d", WebPGetDecoderVersion());
     }
     return 0;
 }
